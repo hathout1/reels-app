@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-reels">
+      <div class="reels">
+        <video src="test videos/video1.mp4" class="reel-player"></video>
+        <div class="footer">
+          <div class="text">
+            <h3>EL-BA4MOHANDES</h3>
+            <p class="title">Video Title</p>
+            <div class="img-marq">
+              <img src="images/upload.png" alt="upload pic" />
+              <marquee> Video Description</marquee>
+            </div>
+          </div>
+          <img src="images/play.png" alt="play pic" class="play-image" />
+        </div>
+      </div>
+      <div class="reels">
+        <video src="test videos/video2.mp4" class="reel-player"></video>
+        <div class="footer">
+          <div class="text">
+            <h3>EL-BA4MOHANDES</h3>
+            <p class="title">Video Title</p>
+            <div class="img-marq">
+              <img src="images/upload.png" alt="upload pic" />
+              <marquee> Video Description</marquee>
+            </div>
+          </div>
+          <img src="images/play.png" alt="play pic" class="play-image" />
+        </div>
+      </div>
+      <div class="reels">
+        <video src="test videos/video3.mp4" class="reel-player"></video>
+        <div class="footer">
+          <div class="text">
+            <h3>EL-BA4MOHANDES</h3>
+            <p class="title">Video Title</p>
+            <div class="img-marq">
+              <img src="images/upload.png" alt="upload pic" />
+              <marquee> Video Description</marquee>
+            </div>
+          </div>
+          <img src="images/play.png" alt="play pic" class="play-image" />
+        </div>
+      </div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const videos = document.querySelectorAll(".reel-player");
+
+        videos.forEach((video) => {
+          video.addEventListener("click", () => {
+            if (video.paused) {
+              video.play();
+            } else {
+              video.pause();
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
